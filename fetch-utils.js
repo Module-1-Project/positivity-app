@@ -37,6 +37,20 @@ export async function logout() {
     return (window.location.href = '../');
 }
 
+export async function fetchQuote() {
+    const response = await client.from('quotes').select('*');
+    console.log(response.data);
+    return response.data;
+}
+
+export async function fetchDetails() {
+    const response = await client.from('quote-detail').select('*');
+    console.log(response.data);
+    return response.data;
+}
+
+
+
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
 // }
