@@ -16,7 +16,7 @@ redirectIfLoggedIn();
 
 homeButton.addEventListener('click', () => {
     
-    window.location.href = './index.html';
+    window.location.href = '../index.html';
 });
 
 signUpForm.addEventListener('submit', async (event) => {
