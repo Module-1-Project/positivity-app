@@ -39,14 +39,13 @@ export async function logout() {
 
 export async function fetchQuote() {
     const response = await client.from('quotes').select('*');
-    
     console.log(response.data);
     return response.data;
 }
 
 export async function fetchDetails() {
     const response = await client.from('quote-detail').select('*');
-    console.log(response.data)
+    console.log(response.data);
     return response.data;
 }
 
