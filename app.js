@@ -1,34 +1,11 @@
-import { redirectIfLoggedIn, signInUser, signupUser } from './fetch-utils.js';
+const signInSignUp = document.getElementById('auth');
+// const goToProfile = document.getElementById('go-to-profile');
+const aboutCreators = document.getElementById('about-button');
 
-const signInForm = document.getElementById('sign-in');
-const signInEmail = document.getElementById('sign-in-email');
-const signInPassword = document.getElementById('sign-in-password');
-
-const signUpForm = document.getElementById('sign-up');
-const signUpEmail = document.getElementById('sign-up-email');
-const signUpPassword = document.getElementById('sign-up-password');
-
-// if user currently logged in, redirect
-redirectIfLoggedIn();
-
-signUpForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const user = await signupUser(signUpEmail.value, signUpPassword.value);
-
-    if (user) {
-        redirectIfLoggedIn();
-    } else {
-        console.error(user);
-    }
+aboutCreators.addEventListener('click', () => {
+    window.location.href = './creators-page';
 });
 
-signInForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const user = await signInUser(signInEmail.value, signInPassword.value);
-
-    if (user) {
-        redirectIfLoggedIn();
-    } else {
-        console.error(user);
-    }
+signInSignUp.addEventListener('click', () => {
+    window.location.href = './login-page';
 });
