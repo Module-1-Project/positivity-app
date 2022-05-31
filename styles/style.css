@@ -63,7 +63,7 @@ section {
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
 }
-
+/* 
 header {
     display: flex;
     justify-content: space-evenly;
@@ -71,7 +71,7 @@ header {
     height: var(--header-height);
     box-shadow: var(--shadow);
     margin: 5px;
-}
+} */
 
 button {
     background-color: green;
@@ -164,6 +164,6 @@ p {
 }
 
 
-button:hover {
+/* button:hover {
     
-}
+} */

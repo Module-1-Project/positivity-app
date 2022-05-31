@@ -8,12 +8,21 @@ const signUpForm = document.getElementById('sign-up');
 const signUpEmail = document.getElementById('sign-up-email');
 const signUpPassword = document.getElementById('sign-up-password');
 
+const homeButton = document.getElementById('home-button');
+const logOutButton = document.getElementById('logout-button');
 // if user currently logged in, redirect
 redirectIfLoggedIn();
+
+
+homeButton.addEventListener('click', () => {
+    
+    window.location.href = './index.html';
+});
 
 signUpForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const user = await signupUser(signUpEmail.value, signUpPassword.value);
+
 
     if (user) {
         redirectIfLoggedIn();
@@ -25,7 +34,7 @@ signUpForm.addEventListener('submit', async (event) => {
 signInForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const user = await signInUser(signInEmail.value, signInPassword.value);
-
+    console.log('string');
     if (user) {
         redirectIfLoggedIn();
     } else {
