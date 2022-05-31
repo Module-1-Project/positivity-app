@@ -1,5 +1,5 @@
 const signInSignUp = document.getElementById('auth');
-const goToProfile = document.getElementById('go-to-profile');
+// const goToProfile = document.getElementById('go-to-profile');
 const aboutCreators = document.getElementById('about-button');
 
 aboutCreators.addEventListener('click', () => {
