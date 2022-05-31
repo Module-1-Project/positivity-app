@@ -140,7 +140,6 @@ p {
   }
 
 #logout {
-    position: fixed;
     right: 20px;
     top: 90px;
 }
