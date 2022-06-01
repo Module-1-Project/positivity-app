@@ -167,3 +167,7 @@ p {
 button:hover {
     
 }
+
+#quote-render {
+    background-color: pink;
+}
