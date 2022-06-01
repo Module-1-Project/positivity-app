@@ -15,4 +15,25 @@ logOutButton.addEventListener('click', () => {
     logout();
 });
 
-console.log('This button is working');
+submitButton.addEventListener('click', () => {
+
+});
+
+burnButton.addEventListener('click', () => {
+    const burnText = document.getElementById('burn-text');
+    burnText.textContent = '';
+    const counter = document.getElementById('counter');
+    for (let i = 0; i < counter; i++) {
+        const div = (i);
+
+    }
+}); // Finish for later
+
+grabButton.addEventListener('click', () => {
+
+});
+
+aboutButton.addEventListener('click', () => {
+    window.location.href = '../creators-page/index.html';
+});
+
