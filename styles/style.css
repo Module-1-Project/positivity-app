@@ -163,6 +163,13 @@ p {
     margin: 10px;
 }
 
+/* button:hover {
+    
+} */
+
+#quote-render {
+    background-color: pink;
+}
 
 select {
     font-size: 18px;
