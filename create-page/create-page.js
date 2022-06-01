@@ -1,17 +1,15 @@
-import { checkAuth, logout, fetchQuote, fetchQuoteId } from '../fetch-utils.js';
-// import { renderQuote } from '../render-utils.js';
-// import { renderOption } from '../render-utils.js';
+import { checkAuth, logout, fetchQuote } from '../fetch-utils.js';
 
 checkAuth();
 
-// const quoteContainer = document.getElementById('quote-container');
+
 const logoutButton = document.getElementById('logout');
 
 logoutButton.addEventListener('click', () => {
     logout();
 });
 
-const quoteDiv = document.getElementById('quote-div');
+const quoteAnchor = document.getElementById('quote-div');
 const selectEl = document.querySelector('select');
 
 window.addEventListener('load', async () => {
@@ -26,11 +24,21 @@ window.addEventListener('load', async () => {
     }
 });
 
-selectEl.addEventListener('change', async () => {
-    const data = await fetchQuoteId(selectEl.value);
-    console.log(data);
-    quoteDiv.textContent = data.exercises;
-    const exercises = document.createElement('div');
-    exercises.textContent = data.wellness;
-    quoteDiv.append(exercises);
-});
+
+async function renderAnchor() {
+    const anchor = await fetchQuote();
+    for (let anchors of anchor) {
+        selectEl.addEventListener('change', async () => {
+            // const data = await fetchQuoteId(selectEl.value);
+        
+            quoteAnchor.textContent = anchors.exercises;
+            quoteAnchor.append(exercises);
+            
+        });
+        
+        const exercises = document.createElement('a');
+        exercises.href = `/detail-page/?id=${anchors.id}`;
+        exercises.textContent = anchors.wellness;
+    }
+}
+renderAnchor();

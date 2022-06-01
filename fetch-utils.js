@@ -38,7 +38,7 @@ export async function logout() {
 }
 
 export async function fetchQuote() {
-    const response = await client.from('quotes').select('*');
+    const response = await client.from('quotes').select('*, quote-detail(*)');
     console.log(response.data);
     return response.data;
 }
@@ -59,6 +59,14 @@ export async function randomQuote(id) {
 
 export async function fetchQuoteId(id) {
     const response = await client.from('quotes').select('*').match({ id }).single();
+    return response.data;
+}
+
+
+
+export async function getQuoteById(idFromParams) {
+    const response = await client.from('quotes').select('*').match({ id: idFromParams }).single();
+    console.log(response.data);
     return response.data;
 }
 
