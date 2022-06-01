@@ -7,13 +7,6 @@ export function renderQuote(quote) {
     return div;
 }
 
-// export function renderOption(quote) {
-//     const option = document.createElement('option');
-//     option.value = quote.quote;
-//     option.textContent = quote.author;
-//     return option;
-// }
 
-//export function renderAnchor() {
     
 
