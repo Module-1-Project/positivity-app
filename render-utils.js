@@ -13,3 +13,7 @@ export function renderQuote(quote) {
 //     option.textContent = quote.author;
 //     return option;
 // }
+
+//export function renderAnchor() {
+    
+

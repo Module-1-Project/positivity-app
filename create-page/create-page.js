@@ -26,13 +26,31 @@ window.addEventListener('load', async () => {
     }
 });
 
-selectEl.addEventListener('change', async () => {
-    const data = await fetchQuoteId(selectEl.value);
-    console.log(data);
-    quoteAnchor.textContent = data.exercises;
-    const exercises = document.createElement('a');
-    exercises.href = '/detail-page/';
-    exercises.textContent = data.wellness;
-    quoteAnchor.append(exercises);
-});
+// selectEl.addEventListener('change', async (quote) => {
+//     const data = await fetchQuoteId(selectEl.value);
+//     console.log(data);
+//     quoteAnchor.textContent = data.exercises;
+//     const exercises = document.createElement('a');
+//     exercises.href = `/detail-page/?id=${quote.id}`;
+//     exercises.textContent = data.wellness;
+//     quoteAnchor.append(exercises);
+//     console.log(quote.id);
+// });
 
+async function renderAnchor() {
+    const anchor = await fetchQuote();
+    for (let anchors of anchor) {
+        selectEl.addEventListener('change', async (quote) => {
+            const data = await fetchQuoteId(selectEl.value);
+            console.log(data);
+            quoteAnchor.textContent = anchors.exercises;
+            quoteAnchor.append(exercises);
+            console.log(quote.id);
+        });
+        
+        const exercises = document.createElement('a');
+        exercises.href = `/detail-page/?id=${anchors.id}`;
+        exercises.textContent = anchors.wellness;
+    }
+}
+renderAnchor();
