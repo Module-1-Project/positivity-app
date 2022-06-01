@@ -11,7 +11,7 @@ logoutButton.addEventListener('click', () => {
     logout();
 });
 
-const quoteDiv = document.getElementById('quote-div');
+const quoteAnchor = document.getElementById('quote-div');
 const selectEl = document.querySelector('select');
 
 window.addEventListener('load', async () => {
@@ -29,8 +29,10 @@ window.addEventListener('load', async () => {
 selectEl.addEventListener('change', async () => {
     const data = await fetchQuoteId(selectEl.value);
     console.log(data);
-    quoteDiv.textContent = data.exercises;
-    const exercises = document.createElement('div');
+    quoteAnchor.textContent = data.exercises;
+    const exercises = document.createElement('a');
+    exercises.href = '/detail-page/';
     exercises.textContent = data.wellness;
-    quoteDiv.append(exercises);
+    quoteAnchor.append(exercises);
 });
+
