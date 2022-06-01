@@ -1,4 +1,4 @@
-import { checkAuth, logout, fetchQuote } from '../fetch-utils.js';
+import { checkAuth, logout, fetchQuote, fetchQuoteId } from '../fetch-utils.js';
 
 checkAuth();
 
@@ -24,21 +24,22 @@ window.addEventListener('load', async () => {
     }
 });
 
-
-async function renderAnchor() {
-    const anchor = await fetchQuote();
-    for (let anchors of anchor) {
-        selectEl.addEventListener('change', async () => {
-            // const data = await fetchQuoteId(selectEl.value);
-        
-            quoteAnchor.textContent = anchors.exercises;
-            quoteAnchor.append(exercises);
-            
-        });
-        
-        const exercises = document.createElement('a');
-        exercises.href = `/detail-page/?id=${anchors.id}`;
-        exercises.textContent = anchors.wellness;
-    }
-}
-renderAnchor();
+selectEl.addEventListener('change', async () => {
+    quoteAnchor.textContent = '';
+    const selectedId = selectEl.value;
+    const data = await fetchQuoteId(selectedId);
+    const aWellness = document.createElement('a');
+    aWellness.textContent = data.wellness;
+    aWellness.href = `/detail-page/?id=${selectedId}`;
+    const aExercise = document.createElement('a');
+    aExercise.textContent = data.exercises;
+    aExercise.href = `/detail-page/?id=${selectedId}`;
+    quoteAnchor.append(aExercise, aWellness);
+});
+// display element with options from database
+// when list option has been chosen,
+// determine which option has been chosen from the select value
+// call supabase get quote data from supabase
+// data from supabase updates wellness/exercise on page
+// wellness / exercise is a link that uses ID of quote selected
+//links move you to details page w/ selected option

@@ -10,3 +10,4 @@ export function renderQuote(quote) {
 
     
 
+// adjust render quote to include remaining columns. and add columns

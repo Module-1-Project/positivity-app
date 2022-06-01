@@ -31,7 +31,7 @@ signInSignUp.addEventListener('click', () => {
 quote();
 async function quote() {
     const quoteRender = document.getElementById('quote-render');
-    const randomNum = Math.floor(Math.random() * 4); // Update Number with Number of Existing Quotes
+    const randomNum = Math.ceil(Math.random() * 4); // Update Number with Number of Existing Quotes
     const quoteEl = await randomQuote(randomNum);
     console.log(quoteEl);
 
