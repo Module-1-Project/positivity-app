@@ -38,7 +38,7 @@ export async function logout() {
 }
 
 export async function fetchQuote() {
-    const response = await client.from('quotes').select('*, quote-detail(*)');
+    const response = await client.from('quotes').select('*');
     console.log(response.data);
     return response.data;
 }

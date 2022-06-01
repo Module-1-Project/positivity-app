@@ -3,7 +3,11 @@ export function renderQuote(quote) {
     div.classList.add('quote-list');
     const h2 = document.createElement('h2');
     h2.textContent = quote.quote;
-    div.append(h2);
+    const p1 = document.createElement('p');
+    const p2 = document.createElement('p');
+    p1.textContent = quote.exercises_details;
+    p2.textContent = quote.wellness_details;
+    div.append(h2, p1, p2);
     return div;
 }
 
