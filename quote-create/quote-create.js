@@ -1,4 +1,4 @@
-import { logout, randomQuote, createNewJournal } from '../fetch-utils.js';
+import { logout, randomQuote, createNewJournal, checkAuth } from '../fetch-utils.js';
 
 const homeButton = document.getElementById('home');
 const logOutButton = document.getElementById('logout');
@@ -34,7 +34,6 @@ logOutButton.addEventListener('click', () => {
 submitButton.addEventListener('submit', async (e) => { 
     e.preventDefault();
     const data = new FormData(submitButton);
-
     const newJournal = {
         entry: data.get('journal-input')
     };
@@ -61,3 +60,4 @@ aboutButton.addEventListener('click', () => {
     window.location.href = '../creators-page/index.html';
 });
 
+checkAuth();
