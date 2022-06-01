@@ -16,10 +16,27 @@
 
 <body>
     <header>
-        <button id="auth">Sign In/Sign Up</button>
-        <button id="go-to-profile">Go To Profile</button>
+        <button id="home">Home</button>
+        <button id="logout">Logout</button>
     </header>
-    <main>
+    <main id="alignment">
+        <section id="left">
+            <button id="journal-submit">Submit</button>
+            <form id="journal-entry">
+                <h3>Journal</h3>
+                <input type="text">
+                <div id="render-quote">Render Quote Placeholder</div>
+            </form>
+        </section>
+        
+        <section id="right">
+            <form id="negative-thoughts">
+                <input type="text">
+                <button>Burn it with Fire</button>
+                <a id="counter">Thoughts Burned: [Number]</a>
+                <button id="render-quote">Grab a Quote</button>
+            </form>
+        </section>
     </main>
     <footer>
         <button id="about-button">About Creators</button>

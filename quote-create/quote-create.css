@@ -1,0 +1,21 @@
+#left {
+    background-color: pink;
+    border: 5px solid red;
+    
+}
+
+#right {
+    background-color: lightblue;
+    border: 5px solid blue;
+}
+
+#negative-thoughts {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+}
+
+#alignment {
+    display: flex;
+    flex-direction: row;
+}
