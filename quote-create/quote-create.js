@@ -1,4 +1,4 @@
-import { logout } from '../fetch-utils.js';
+import { logout, randomQuote } from '../fetch-utils.js';
 
 const homeButton = document.getElementById('home');
 const logOutButton = document.getElementById('logout');
@@ -27,7 +27,7 @@ burnButton.addEventListener('click', (e) => {
 });
 
 grabButton.addEventListener('click', () => {
-
+    window.location.href = ' ';// See Sean and David's Branch
 });
 
 aboutButton.addEventListener('click', () => {
