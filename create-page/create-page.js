@@ -1,10 +1,10 @@
 import { checkAuth, logout, fetchQuote, fetchQuoteId } from '../fetch-utils.js';
-import { renderQuote } from '../render-utils.js';
+// import { renderQuote } from '../render-utils.js';
 // import { renderOption } from '../render-utils.js';
 
 checkAuth();
 
-const quoteContainer = document.getElementById('quote-container');
+// const quoteContainer = document.getElementById('quote-container');
 const logoutButton = document.getElementById('logout');
 
 logoutButton.addEventListener('click', () => {
@@ -17,7 +17,7 @@ const selectEl = document.querySelector('select');
 window.addEventListener('load', async () => {
 
     const quoteEl = await fetchQuote();
-    
+    console.log(quoteEl);
     for (let quotes of quoteEl) {
         const option = document.createElement('option');
         option.value = quotes.id;
