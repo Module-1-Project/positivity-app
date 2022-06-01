@@ -19,15 +19,12 @@ submitButton.addEventListener('click', () => {
 
 });
 
-burnButton.addEventListener('click', () => {
-    const burnText = document.getElementById('burn-text');
-    burnText.textContent = '';
+burnButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('burn-text').value = ' ';
     const counter = document.getElementById('counter');
-    for (let i = 0; i < counter; i++) {
-        const div = (i);
-
-    }
-}); // Finish for later
+    counter.textContent++;
+});
 
 grabButton.addEventListener('click', () => {
 
