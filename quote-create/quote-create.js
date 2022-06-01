@@ -31,7 +31,7 @@ logOutButton.addEventListener('click', () => {
     logout();
 });
 
-submitButton.addEventListener('click', () => { // Submits Journal Entry to Supabase
+submitButton.addEventListener('click', () => { // Submits Journal Entry to Supabase, goes to quotes table, not quotes detail 
 
 });
 
