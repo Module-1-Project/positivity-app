@@ -70,6 +70,10 @@ export async function getQuoteById(idFromParams) {
     return response.data;
 }
 
+export async function createNewJournal(entry) {
+    const response = await client.from('journal-table').insert(entry);
+    return response.data;
+}
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
 // }
