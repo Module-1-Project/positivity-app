@@ -2,11 +2,15 @@ import { checkAuth, logout, fetchQuote, fetchQuoteId } from '../fetch-utils.js';
 
 checkAuth();
 
-
+const quoteCreateButton = document.getElementById('quote-create-button');
 const logoutButton = document.getElementById('logout');
 
 logoutButton.addEventListener('click', () => {
     logout();
+});
+
+quoteCreateButton.addEventListener('click', () => {
+    window.location.href = '/quote-create/';
 });
 
 const quoteAnchor = document.getElementById('quote-div');

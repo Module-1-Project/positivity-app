@@ -1,8 +1,8 @@
-import { logout, randomQuote } from '../fetch-utils.js';
+import { logout, randomQuote, createNewJournal, checkAuth } from '../fetch-utils.js';
 
 const homeButton = document.getElementById('home');
 const logOutButton = document.getElementById('logout');
-const submitButton = document.getElementById('journal-submit');
+const submitButton = document.getElementById('journal-entry');
 const burnButton = document.getElementById('burn-button');
 const grabButton = document.getElementById('grab-quote');
 const aboutButton = document.getElementById('about-button');
@@ -31,8 +31,18 @@ logOutButton.addEventListener('click', () => {
     logout();
 });
 
-submitButton.addEventListener('click', () => { // Submits Journal Entry to Supabase, goes to quotes table, not quotes detail 
+submitButton.addEventListener('submit', async (e) => { 
+    e.preventDefault();
+    const data = new FormData(submitButton);
+    const newJournal = {
+        entry: data.get('journal-input')
+    };
 
+    console.log(newJournal.entry);
+    const response = await createNewJournal(newJournal);
+
+    console.log(response);
+    window.location.href = '/create-page/';
 });
 
 burnButton.addEventListener('click', (e) => {
@@ -50,3 +60,4 @@ aboutButton.addEventListener('click', () => {
     window.location.href = '../creators-page/index.html';
 });
 
+checkAuth();
