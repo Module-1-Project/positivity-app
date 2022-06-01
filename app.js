@@ -1,5 +1,5 @@
-import { fetchQuote, randomQuote } from './fetch-utils.js';
-import { renderQuote } from './render-utils.js';
+import { randomQuote } from './fetch-utils.js';
+// import { renderQuote } from './render-utils.js';
 
 const signInSignUp = document.getElementById('auth');
 // const goToProfile = document.getElementById('go-to-profile');
