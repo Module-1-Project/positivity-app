@@ -28,7 +28,7 @@ signInSignUp.addEventListener('click', () => {
 // }
 
 // onLoad();
-
+quote();
 async function quote() {
     const quoteRender = document.getElementById('quote-render');
     const randomNum = Math.floor(Math.random() * 4); // Update Number with Number of Existing Quotes
@@ -44,4 +44,3 @@ async function quote() {
 
     quoteRender.append(h3, p);
 }
-quote();
