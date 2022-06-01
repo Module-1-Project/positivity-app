@@ -1,0 +1,38 @@
+#left {
+    background-color: pink;
+    border: 5px solid red;
+    
+}
+
+#right {
+    background-color: lightblue;
+    border: 5px solid blue;
+}
+
+#negative-thoughts {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+}
+
+#alignment {
+    display: flex;
+    flex-direction: row;
+}
+
+.journal-entry {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "grid-1 grid-2"
+    "grid-3 grid-3"
+    "grid-3 grid-3"
+    "grid-4 grid-4"; 
+}
+
+.grid-1 { grid-area: grid-1; }
+.grid-2 { grid-area: grid-2; }
+.grid-3 { grid-area: grid-3; }
+.grid-4 { grid-area: grid-4; }

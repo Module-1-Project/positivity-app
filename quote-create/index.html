@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="./quote-create.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <button id="home">Home</button>
+        <button id="logout">Logout</button>
+    </header>
+    <main id="alignment">
+        <section id="left">
+            <form id="journal-entry" class="journal-entry">
+                <h3 class="grid-1">Journal (Will be Displayed Somewhere on Page)</h3>
+                <button class="grid-2" id="journal-submit">Submit</button>
+                <input class="grid-3" type="text">
+                <div class="grid-4" id="render-quote"></div>
+            </form>
+        </section>
+        
+        <section id="right">
+            <form id="negative-thoughts">
+                <input type="text" id="burn-text">
+                <button id="burn-button" type="button">Burn it with Fire</button>
+                <p>Thoughts Burned: <span id="counter">0</span></p>
+                <button id="grab-quote">Grab a Quote</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <button id="about-button">About Creators</button>
+    </footer>
+    <script type="module" src="./quote-create.js"></script>
+</body>
+
+</html>
