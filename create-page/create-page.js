@@ -1,4 +1,4 @@
-import { checkAuth, logout, fetchQuote, fetchQuoteId } from '../fetch-utils.js';
+import { checkAuth, logout, fetchQuote } from '../fetch-utils.js';
 
 checkAuth();
 
