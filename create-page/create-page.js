@@ -11,22 +11,6 @@ logoutButton.addEventListener('click', () => {
     logout();
 });
 
-// async function onLoad(e) {
-//     e.preventDefault();
-//     const selectEl = document.querySelector('select');
-//     const quoteEl = await fetchQuote();
-
-//     for (let quote of quoteEl) {
-//         const quoteOption = renderOption();
-//         selectEl.append(quoteOption);
-//     }
-// }
-
-// // onLoad();
-// function quoteFilter() {
-//     const quoteArr = [];
-// }
-
 const quoteDiv = document.getElementById('quote-div');
 const selectEl = document.querySelector('select');
 
