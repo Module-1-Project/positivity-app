@@ -163,10 +163,9 @@ p {
     margin: 10px;
 }
 
-
-button:hover {
+/* button:hover {
     
-}
+} */
 
 #quote-render {
     background-color: pink;

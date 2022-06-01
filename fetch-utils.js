@@ -51,7 +51,12 @@ export async function fetchDetails() {
 
 export async function randomQuote(id) {
     const response = await client.from('quotes').select('*').match({ id: id }).single();
-    console.log(response);
+    console.log(response.data);
+    return response.data;
+}
+
+export async function fetchQuoteId(id) {
+    const response = await client.from('quotes').select('*').match({ id }).single();
     return response.data;
 }
 
