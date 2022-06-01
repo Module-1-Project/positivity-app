@@ -49,6 +49,11 @@ export async function fetchDetails() {
     return response.data;
 }
 
+export async function randomQuote(id) {
+    const response = await client.from('quotes').select('*').match({ id: id }).single();
+    console.log(response);
+    return response.data;
+}
 
 
 // function checkError({ data, error }) {
