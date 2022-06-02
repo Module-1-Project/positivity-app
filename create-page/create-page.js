@@ -1,5 +1,5 @@
 import { checkAuth, logout, fetchQuote, fetchQuoteId, fetchJournal } from '../fetch-utils.js';
-import { renderJournal } from '../render-utils.js';
+
 checkAuth();
 
 const quoteCreateButton = document.getElementById('quote-create-button');
