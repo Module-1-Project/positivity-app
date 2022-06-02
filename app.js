@@ -1,4 +1,4 @@
-import { randomQuote } from './fetch-utils.js';
+import { randomQuote, getUser } from './fetch-utils.js';
 
 const signInSignUp = document.getElementById('auth');
 const goToProfile = document.getElementById('go-to-profile');
@@ -13,7 +13,12 @@ signInSignUp.addEventListener('click', () => {
 });
 
 goToProfile.addEventListener('click', () => {
-    window.location.href = './create-page';
+    if (getUser()) {
+        location.replace('/create-page');
+    } else {
+        window.location.href = './login-page';
+    }
+    // window.location.href = './create-page';
 });
 
 quote();
