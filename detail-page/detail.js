@@ -15,7 +15,7 @@ async function loadData() {
     const quote = await getQuoteById(id);
     const quoteEl = renderQuote(quote);
     displayEl.append(quoteEl);
-    
+    displayEl.classList.add('detail-display');
 }
 loadData();
 
