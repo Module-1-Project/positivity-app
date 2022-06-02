@@ -1,5 +1,5 @@
 import { checkAuth, logout, fetchQuote, fetchQuoteId, fetchJournal } from '../fetch-utils.js';
-
+import { renderJournal } from '../render-utils.js';
 checkAuth();
 
 const quoteCreateButton = document.getElementById('quote-create-button');
@@ -57,13 +57,24 @@ selectEl.addEventListener('change', async () => {
 //We will need a button to remove journal entry from display
 
 
-window.addEventListener('load', async () => {
-    const journalEl = await fetchJournal();
-    console.log(journalEl);
-    for (let journal of journalEl) {
-        const journalEnt = document.createElement('p');
-        journalEnt.textContent = journalEnt.journal;
-        console.log(journalEnt);
-        journalDisplay.append(journalEnt);
+// window.addEventListener('load', async () => {
+//     const journalEl = await fetchJournal();
+//     console.log(journalEl);
+//     for (let journal of journalEl) {
+//         const journalEnt = document.createElement('p');
+//         journalEnt.textContent = journalEnt.journal;
+//         console.log(journalEnt);
+//         journalDisplay.append(journalEnt);
+//     }
+
+// });
+
+async function loadData() {
+    const journals = await fetchJournal();
+    for (let journal of journals) {
+        const journalDiv = renderJournal(journal);
+        journalDisplay.append(journalDiv);
     }
-});
+}
+
+loadData();
