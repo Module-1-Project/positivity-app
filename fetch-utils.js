@@ -43,14 +43,37 @@ export async function fetchQuote() {
     return response.data;
 }
 
-export async function fetchDetails() {
-    const response = await client.from('quote-detail').select('*');
+export async function fetchJournal() {
+    const response = await client.from('journal-table').select('*');
     console.log(response.data);
     return response.data;
 }
 
 
+export async function randomQuote(id) {
+    const response = await client.from('quotes').select('*').match({ id: id }).single();
+    console.log(response.data);
+    return response.data;
+}
 
+
+export async function fetchQuoteId(id) {
+    const response = await client.from('quotes').select('*').match({ id }).single();
+    return response.data;
+}
+
+
+
+export async function getQuoteById(idFromParams) {
+    const response = await client.from('quotes').select('*').match({ id: idFromParams }).single();
+    console.log(response.data);
+    return response.data;
+}
+
+export async function createNewJournal(entry) {
+    const response = await client.from('journal-table').insert(entry);
+    return response.data;
+}
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
 // }

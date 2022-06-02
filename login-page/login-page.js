@@ -13,6 +13,9 @@ const logOutButton = document.getElementById('logout-button');
 // if user currently logged in, redirect
 redirectIfLoggedIn();
 
+logOutButton.addEventListener('click', async () => {
+    await logout();
+});
 
 homeButton.addEventListener('click', () => {
     window.location.href = '../index.html';
