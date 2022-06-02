@@ -140,7 +140,6 @@ p {
   }
 
 #logout {
-    position: fixed;
     right: 20px;
     top: 90px;
 }
@@ -164,7 +163,22 @@ p {
     margin: 10px;
 }
 
+<<<<<<< HEAD
 
 /* button:hover {
     
 } */
+=======
+/* button:hover {
+    
+} */
+
+#quote-render {
+    background-color: pink;
+}
+
+select {
+    font-size: 18px;
+    bor
+}
+>>>>>>> ac806d8bfee95aceb8582a0638757889add9eef0
