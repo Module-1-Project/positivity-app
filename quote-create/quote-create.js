@@ -1,4 +1,4 @@
-import { logout, randomQuote, createNewJournal, checkAuth, fetchQuote } from '../fetch-utils.js';
+import { logout, fetchQuoteId, createNewJournal, checkAuth, fetchQuote } from '../fetch-utils.js';
 
 const homeButton = document.getElementById('home');
 const logOutButton = document.getElementById('logout');
@@ -12,7 +12,7 @@ async function quote() {
     const grabQuote = await fetchQuote();
     const renderQuote = document.getElementById('render-quote');
     const randomNum = Math.ceil(Math.random() * grabQuote.length); // Current Number of Quotes
-    const quoteEl = await randomQuote(randomNum);
+    const quoteEl = await fetchQuoteId(randomNum);
     console.log(quoteEl);
 
     const h5 = document.createElement('h5');

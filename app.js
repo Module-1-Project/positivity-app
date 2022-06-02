@@ -1,4 +1,4 @@
-import { randomQuote, getUser, fetchQuote } from './fetch-utils.js';
+import { fetchQuoteId, getUser, fetchQuote } from './fetch-utils.js';
 
 const signInSignUp = document.getElementById('auth');
 const goToProfile = document.getElementById('go-to-profile');
@@ -26,7 +26,7 @@ async function quote() {
     const grabQuote = await fetchQuote();
     const quoteRender = document.getElementById('quote-render');
     const randomNum = Math.ceil(Math.random() * grabQuote.length); // Update Number with Number of Existing Quotes
-    const quoteEl = await randomQuote(randomNum);
+    const quoteEl = await fetchQuoteId(randomNum);
     console.log(quoteEl);
 
     const h3 = document.createElement('h3');

@@ -49,24 +49,8 @@ export async function fetchJournal() {
     return response.data;
 }
 
-
-export async function randomQuote(id) {
-    const response = await client.from('quotes').select('*').match({ id: id }).single();
-    console.log(response.data);
-    return response.data;
-}
-
-
 export async function fetchQuoteId(id) {
     const response = await client.from('quotes').select('*').match({ id }).single();
-    return response.data;
-}
-
-
-
-export async function getQuoteById(idFromParams) {
-    const response = await client.from('quotes').select('*').match({ id: idFromParams }).single();
-    console.log(response.data);
     return response.data;
 }
 
