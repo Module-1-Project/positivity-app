@@ -27,7 +27,6 @@
     display: flex;
     flex-direction: row;
     height: 90%;
-    border: 1px solid red;
 }
 
 #button-header {
