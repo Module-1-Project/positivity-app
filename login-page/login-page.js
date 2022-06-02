@@ -18,15 +18,16 @@ logOutButton.addEventListener('click', async () => {
 });
 
 homeButton.addEventListener('click', () => {
-    
-    window.location.href = './index.html';
+    window.location.href = '../index.html';
+});
+
+logOutButton.addEventListener('click', () => {
+    logout();
 });
 
 signUpForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const user = await signupUser(signUpEmail.value, signUpPassword.value);
-
-
     if (user) {
         redirectIfLoggedIn();
     } else {
@@ -37,7 +38,6 @@ signUpForm.addEventListener('submit', async (event) => {
 signInForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const user = await signInUser(signInEmail.value, signInPassword.value);
-    console.log('string');
     if (user) {
         redirectIfLoggedIn();
     } else {

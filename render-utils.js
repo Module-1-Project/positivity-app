@@ -10,12 +10,3 @@ export function renderQuote(quote) {
     div.append(h2, p1, p2);
     return div;
 }
-
-
-
-//something to commit
-
-
-    
-
-// adjust render quote to include remaining columns. and add columns
