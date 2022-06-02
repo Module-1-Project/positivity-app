@@ -2,17 +2,27 @@
     background-color: red;
     border: 4px solid greenyellow;
     height: 400px;
+    width: 30%;
+    margin: 10%;
 }
 
 #right {
     background-color: rgb(0, 255, 13);
     border: 4px solid rgb(47, 78, 255);
     height: 400px;
+    width: 30%;
+    margin: 10%;
+    
 }
 
+#drop-down {
+    display: flex;
+    width: 100%;
+}
 #alignment {
     display: flex;
     flex-direction: row;
+    
 }
 
 #button-header {
