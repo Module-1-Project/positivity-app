@@ -5,7 +5,7 @@ const logoutButton = document.getElementById('logout-button');
 const displayEl = document.getElementById('display');
 
 logoutButton.addEventListener('click', () => {
-    logout();
+    window.location.href = '../create-page';
 });
 
 
