@@ -1,9 +1,11 @@
-import { checkAuth, logout, fetchQuote, fetchQuoteId } from '../fetch-utils.js';
-
+import { checkAuth, logout, fetchQuote, fetchQuoteId, fetchJournal } from '../fetch-utils.js';
+import { renderJournal } from '../render-utils.js';
 checkAuth();
 
 const quoteCreateButton = document.getElementById('quote-create-button');
 const logoutButton = document.getElementById('logout');
+
+const journalDisplay = document.getElementById('journal-render');
 
 logoutButton.addEventListener('click', () => {
     logout();
@@ -47,3 +49,38 @@ selectEl.addEventListener('change', async () => {
 // data from supabase updates wellness/exercise on page
 // wellness / exercise is a link that uses ID of quote selected
 //links move you to details page w/ selected option
+
+//display journal entries 
+//have the entries listed inside the container in the page
+//Entries pulled from supabase to be displayed
+//Have option to remover a selected journal entry from the container
+//Button will remove row from supabase table
+//We will need a button to remove journal entry from display
+
+
+// window.addEventListener('load', async () => {
+//     const journalEl = await fetchJournal();
+//     console.log(journalEl);
+//     for (let journal of journalEl) {
+//         const journalEnt = document.createElement('p');
+//         journalEnt.textContent = journalEnt.journal;
+//         console.log(journalEnt);
+//         journalDisplay.append(journalEnt);
+//     }
+
+// });
+
+async function loadData() {
+    const journals = await fetchJournal();
+    
+    for (let journal of journals) {
+        const journalDiv = renderJournal(journal);
+        journalDisplay.append(journalDiv);
+        console.log(journalDisplay);
+    }
+}
+
+loadData();
+
+//links move you to details page w/ selected option
+
