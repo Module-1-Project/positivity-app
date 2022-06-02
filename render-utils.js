@@ -21,7 +21,7 @@ export function renderJournal(journal) {
     p1.textContent = journal.entry;
     // p2.textContent = journal.created_at;
 
-
+    console.log(journal.entry);
     div.append(p1); 
 }
 

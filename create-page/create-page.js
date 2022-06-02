@@ -74,9 +74,18 @@ async function loadData() {
     const journals = await fetchJournal();
     
     for (let journal of journals) {
-        const journalDiv = renderJournal(journal);
-        journalDisplay.append(journalDiv);
-        console.log(journalDisplay);
+        // const renderJournalDiv = renderJournal(journal.entry);
+        // console.log(renderJournalDiv);
+        // journalDisplay.append(renderJournalDiv);
+        // console.log(renderJournalDiv);
+        const p1 = document.createElement('p');
+        const div = document.createElement('div');
+   
+        div.classList.add('journal-detail');
+        p1.textContent = journal.entry;
+        console.log(journal.entry);
+        div.append(p1); 
+        journalDisplay.append(div);
     }
 }
 
