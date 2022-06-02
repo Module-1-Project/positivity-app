@@ -4,6 +4,7 @@ checkAuth();
 
 const quoteCreateButton = document.getElementById('quote-create-button');
 const logoutButton = document.getElementById('logout');
+
 const journalDisplay = document.getElementById('journal-render');
 
 logoutButton.addEventListener('click', () => {
@@ -80,3 +81,6 @@ async function loadData() {
 }
 
 loadData();
+
+//links move you to details page w/ selected option
+

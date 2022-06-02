@@ -12,6 +12,7 @@ export function renderQuote(quote) {
 }
 
 
+
 export function renderJournal(journal) {
     const div = document.createElement('div');
     const p1 = document.createElement('p');
@@ -23,6 +24,7 @@ export function renderJournal(journal) {
 
     div.append(p1); 
 }
+
 
 
     
