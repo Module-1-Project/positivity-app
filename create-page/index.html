@@ -10,25 +10,30 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="./create.css">
     <title>Profile</title>
 </head>
 
 <body>
-    <header>
+    <header id="button-header">
+        <button id="home">Home</button>
         <button id="logout">Logout</button>
     </header>    
-    <main>
+    <main id ="alignment">
+        
+    <section id="right">
         <div id="quote-container">
-            <select></select>
+            <div id="journal-render">
+            </div>
+            <select id="drop-down"></select>
         </div>
-
-        <div id="journal-render">
-
-        </div>
-
+    </section>
+    <section id="left">
         <div id="quote-div"></div>
         <button id="quote-create-button">Quote Create</button>
+    </section>      
     </main>
+    
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
     </footer>
