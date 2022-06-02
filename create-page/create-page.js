@@ -4,12 +4,16 @@ checkAuth();
 
 const quoteCreateButton = document.getElementById('quote-create-button');
 const logoutButton = document.getElementById('logout');
-
+const homeButton = document.getElementById('home');
 const quoteRender = document.getElementById('quote-div');
 
 logoutButton.addEventListener('click', () => {
     logout();
 });
+
+homeButton.addEventListener('click', () => {
+    window.location.href = '../index.html';
+})
 
 quoteCreateButton.addEventListener('click', () => {
     window.location.href = '/quote-create/';
@@ -56,5 +60,6 @@ async function loadData() {
         quoteRender.append(div);
     }
 }
+
 
 loadData();

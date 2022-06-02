@@ -63,15 +63,6 @@ section {
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
 }
-/* 
-header {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: var(--color3);
-    height: var(--header-height);
-    box-shadow: var(--shadow);
-    margin: 5px;
-} */
 
 button {
     background-color: rgb(171, 71, 82);
@@ -79,6 +70,7 @@ button {
     border-radius: 20px;
     font-size: 20px;
     border: none;
+    cursor: pointer;
 }
 
 footer {
@@ -163,9 +155,6 @@ p {
     margin: 10px;
 }
 
-/* button:hover { 
-} */
-
 #quote-render {
     background-color: rgba(255, 192, 203, 0.336);
     display: flex;
@@ -184,8 +173,6 @@ h3 {
     font-size: 30px;
     border: 2px;
 }
-    
-} */
 
 #quote-render {
     background-color: pink;
@@ -193,5 +180,10 @@ h3 {
 
 select {
     font-size: 18px;
-    bor
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
 }
