@@ -43,8 +43,8 @@ export async function fetchQuote() {
     return response.data;
 }
 
-export async function fetchDetails() {
-    const response = await client.from('quote-detail').select('*');
+export async function fetchJournal() {
+    const response = await client.from('journal-table').select('*');
     console.log(response.data);
     return response.data;
 }
