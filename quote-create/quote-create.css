@@ -40,6 +40,10 @@
     "grid-4 grid-4"; 
 }
 
+#journal-input {
+    
+}
+
 .grid-1 { grid-area: grid-1; }
 .grid-2 { grid-area: grid-2; margin: 15%; }
 .grid-3 { grid-area: grid-3; }
