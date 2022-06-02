@@ -163,22 +163,25 @@ p {
     margin: 10px;
 }
 
-<<<<<<< HEAD
-
-/* button:hover {
-    
-} */
-=======
 /* button:hover {
     
 } */
 
 #quote-render {
-    background-color: pink;
+    background-color: rgba(255, 192, 203, 0.493);
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 select {
     font-size: 18px;
-    bor
+    
 }
->>>>>>> ac806d8bfee95aceb8582a0638757889add9eef0
+
+h3 {
+    font-size: 30px;
+    border: 2px;
+}

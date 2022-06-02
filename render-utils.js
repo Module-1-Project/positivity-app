@@ -12,6 +12,11 @@ export function renderQuote(quote) {
 }
 
 
+export function renderJournal(journal) {
+    
+}
+
+
     
 
 // adjust render quote to include remaining columns. and add columns
