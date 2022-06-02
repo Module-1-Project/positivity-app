@@ -163,8 +163,7 @@ p {
     margin: 10px;
 }
 
-/* button:hover {
-    
+/* button:hover { 
 } */
 
 #quote-render {
@@ -184,4 +183,15 @@ select {
 h3 {
     font-size: 30px;
     border: 2px;
+}
+    
+} */
+
+#quote-render {
+    background-color: pink;
+}
+
+select {
+    font-size: 18px;
+    bor
 }
