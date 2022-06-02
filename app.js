@@ -18,7 +18,6 @@ goToProfile.addEventListener('click', () => {
     } else {
         window.location.href = './login-page';
     }
-    // window.location.href = './create-page';
 });
 
 quote();

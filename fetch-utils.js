@@ -17,10 +17,6 @@ export function redirectIfLoggedIn() {
     if (getUser()) {
         location.replace('/create-page');
     } 
-    //  else {
-//         window.location.href = './login-page';
-//     }
-// }
 }
 
 export async function signupUser(email, password) {
