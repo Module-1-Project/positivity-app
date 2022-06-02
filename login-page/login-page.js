@@ -1,4 +1,4 @@
-import { redirectIfLoggedIn, signInUser, signupUser } from '../fetch-utils.js';
+import { logout, redirectIfLoggedIn, signInUser, signupUser } from '../fetch-utils.js';
 
 const signInForm = document.getElementById('sign-in');
 const signInEmail = document.getElementById('sign-in-email');
@@ -13,6 +13,9 @@ const logOutButton = document.getElementById('logout-button');
 // if user currently logged in, redirect
 redirectIfLoggedIn();
 
+logOutButton.addEventListener('click', async () => {
+    await logout();
+});
 
 homeButton.addEventListener('click', () => {
     

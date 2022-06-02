@@ -71,9 +71,11 @@ selectEl.addEventListener('change', async () => {
 
 async function loadData() {
     const journals = await fetchJournal();
+    
     for (let journal of journals) {
         const journalDiv = renderJournal(journal);
         journalDisplay.append(journalDiv);
+        console.log(journalDisplay);
     }
 }
 
