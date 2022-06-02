@@ -1,4 +1,4 @@
-import { logout, getQuoteById } from '../fetch-utils.js';
+import { getQuoteById } from '../fetch-utils.js';
 import { renderQuote } from '../render-utils.js';
 
 const logoutButton = document.getElementById('logout-button');

@@ -13,7 +13,7 @@ logoutButton.addEventListener('click', () => {
 
 homeButton.addEventListener('click', () => {
     window.location.href = '../index.html';
-})
+});
 
 quoteCreateButton.addEventListener('click', () => {
     window.location.href = '/quote-create/';
