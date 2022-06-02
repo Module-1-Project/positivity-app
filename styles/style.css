@@ -82,6 +82,7 @@ footer {
     justify-content: space-between;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+    margin: 5px;
 }
 
 /* #auth {
