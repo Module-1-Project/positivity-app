@@ -58,3 +58,9 @@ export async function createNewJournal(entry) {
     const response = await client.from('journal-table').insert(entry);
     return response.data;
 }
+
+export async function deleteJournalEntry(id) {
+    const response = await client.from('journal-table').delete().eq('id', id);
+    return response.data;
+}
+
