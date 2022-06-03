@@ -1,4 +1,4 @@
-import { checkAuth, logout, fetchQuote, fetchQuoteId, fetchJournal } from '../fetch-utils.js';
+import { checkAuth, logout, fetchQuote, fetchQuoteId, fetchJournal, deleteJournalEntry } from '../fetch-utils.js';
 
 checkAuth();
 
@@ -6,6 +6,7 @@ const quoteCreateButton = document.getElementById('quote-create-button');
 const logoutButton = document.getElementById('logout');
 const homeButton = document.getElementById('home');
 const quoteRender = document.getElementById('quote-div');
+const deleteButton = document.getElementById('delete-journal-entry');
 
 logoutButton.addEventListener('click', () => {
     logout();
@@ -49,17 +50,26 @@ selectEl.addEventListener('change', async () => {
 
 async function loadData() {
     const journals = await fetchJournal();
-    
+    quoteRender.textContent = ' ';
+
     for (let journal of journals) {
         const p1 = document.createElement('p');
         const div = document.createElement('div');
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'delete';
+
         div.classList.add('journal-detail');
         p1.textContent = journal.entry;
         console.log(journal.entry);
-        div.append(p1); 
+        div.append(p1, deleteButton); 
+        deleteButton.addEventListener('click', async () => {
+            await deleteJournalEntry(journal.id);
+            loadData();
+        });
         quoteRender.append(div);
     }
 }
+
 
 
 loadData();
