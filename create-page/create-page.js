@@ -6,7 +6,6 @@ const quoteCreateButton = document.getElementById('quote-create-button');
 const logoutButton = document.getElementById('logout');
 const homeButton = document.getElementById('home');
 const quoteRender = document.getElementById('quote-div');
-const deleteButton = document.getElementById('delete-journal-entry');
 
 logoutButton.addEventListener('click', () => {
     logout();
